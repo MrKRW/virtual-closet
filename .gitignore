@@ -1,3 +1,6 @@
+# =========================
+# 1. Frontend (React Native / Expo)
+# =========================
 # Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
 # dependencies
@@ -26,18 +29,49 @@ npm-debug.*
 yarn-debug.*
 yarn-error.*
 
-# macOS
-.DS_Store
-*.pem
-
-# local env files
-.env*.local
-
-# typescript
-*.tsbuildinfo
-
-app-example
-
 # generated native folders
 /ios
 /android
+
+# typescript & templates
+*.tsbuildinfo
+app-example/
+
+# =========================
+# 2. Backend (Python / AI)
+# =========================
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments (Never upload these!)
+venv/
+env/
+.venv/
+pip-log.txt
+
+# =========================
+# 3. Editor & OS (Windows / VS Code)
+# =========================
+# Windows specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS (Kept from the original just in case you collaborate with a Mac user)
+.DS_Store
+
+# VS Code specific
+.vscode/
+.history/
+*.code-workspace
+
+# =========================
+# 4. Security & Secrets
+# =========================
+# API keys and local environment variables
+.env
+.env*.local
+*.pem
