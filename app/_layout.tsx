@@ -1,24 +1,29 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
+import { Tabs } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons'; 
 
-import { useColorScheme } from '@/hooks/use-color-scheme';
-
-export const unstable_settings = {
-  anchor: '(tabs)',
-};
-
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
-
+export default function TabLayout() {
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <Tabs screenOptions={{ tabBarActiveTintColor: '#000000' }}>
+      
+      {/* Tab 1: The Home Screen */}
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: 'Closet',
+          tabBarIcon: ({ color }) => <Ionicons name="shirt-outline" size={24} color={color} />,
+          headerShown: false, // Hides the default header because we built a custom one
+        }}
+      />
+      
+      {/* Tab 2: The Add Item Screen */}
+      <Tabs.Screen
+        name="add"
+        options={{
+          title: 'Add Item',
+          tabBarIcon: ({ color }) => <Ionicons name="add-circle-outline" size={24} color={color} />,
+        }}
+      />
+
+    </Tabs>
   );
 }
