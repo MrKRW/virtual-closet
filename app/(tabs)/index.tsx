@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-// 1. Define the "Blueprint" (Type) for a clothing item so TypeScript is happy
+
 type ClothingItem = {
   id: string;
   name: string;
