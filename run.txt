@@ -1,0 +1,12 @@
+cd backend
+venv\Scripts\activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+
+====== tunnel method 
+ssh -R 80:localhost:8000 nokey@localhost.run
+npx expo start --tunnel
+==================================
+
+============usb method============
+npx expo start
+==============================
