@@ -15,7 +15,7 @@ export default function AddItemScreen() {
   const [imageUri, setImageUri] = useState<string | null>(null);
   const [isProcessing, setIsProcessing] = useState(false);
 
-  // ⚠️ REPLACE THIS WITH YOUR PC'S IPv4 ADDRESS
+ 
   const BACKEND_URL = "https://f08ec506d39a6f.lhr.life";
 
   // 1. Open the Gallery
